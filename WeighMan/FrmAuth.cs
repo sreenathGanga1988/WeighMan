@@ -12,12 +12,13 @@ using WeighMan.Model;
 
 namespace WeighMan
 {
-    public partial class Form1 : Form
+    public partial class FrmAuth : Form
     {
-        public Form1()
+        public FrmAuth()
         {
             InitializeComponent();
             this.label1.Text = "Serial Key : " + GetMACAddress();
+            txt_Entry.Text = GetMACAddress();
         }
         public string GetMACAddress()
         {
@@ -37,6 +38,7 @@ namespace WeighMan
             try
             {
                 string mACAddress = GetMACAddress();
+                
                 char[] chArray = new char[mACAddress.Length];
                 int index = 0;
                 int num2 = mACAddress.Length - 1;
@@ -45,13 +47,16 @@ namespace WeighMan
                     if (index >= mACAddress.Length)
                     {
 
-                        string str2 = new string(chArray);
+                       string str2 = new string(chArray);
+
+                        this.txt_Entry.Text = ("ACT_" + GetMACAddress() + "__" + str2);
                         if (this.txt_Entry.Text == ("ACT_" + GetMACAddress() + "__" + str2))
                         {
                             DataBaseRepository databaser = new DataBaseRepository();
                             databaser.RemoveConfig();
                             WeighConfigMaster weighConfigMaster = new WeighConfigMaster { camera="a",device="a",status= GetMACAddress() };
-                            databaser.InsertConfig(weighConfigMaster);
+                            databaser.
+                                InsertConfig(weighConfigMaster);
                             MessageBox.Show("Restarting Application for activation...");
                             Application.Restart();
                         }
@@ -71,8 +76,9 @@ namespace WeighMan
         private void button1_Click(object sender, EventArgs e)
         {
             DataBaseRepository databaser = new DataBaseRepository();
-            databaser.check("Delete * from Config", "config");
-           
+            databaser.RemoveConfig();
+
+
         }
     }
 

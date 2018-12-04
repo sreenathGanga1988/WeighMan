@@ -27,6 +27,9 @@ namespace WeighMan.Model
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
         public DbSet<WeighConfigMaster> WeighConfigMasters { get; set; }
+        public DbSet<WeightData> WeightDatas { get; set; }
+
+        
     }
 
 }

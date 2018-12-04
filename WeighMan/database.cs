@@ -81,18 +81,45 @@ namespace WeighMan
                 cntxt.SaveChanges();
             }
         }
-       
-            
-        public List<WeighMan.Model.WeighConfigMaster> GetConfigDet()
+        public void InsertWeightData(WeightData weightData)
         {
-            List<WeighMan.Model.WeighConfigMaster> weighConfigMasters = new List<WeighConfigMaster>();
+            using (WeighManContext cntxt = new WeighManContext())
+            {
+                cntxt.WeightDatas.Add(weightData);
+                cntxt.SaveChanges();
+            }
+        }
+        
+        public List<WeighConfigMaster> GetConfigDet()
+        {
         using (WeighManContext cntxt = new WeighManContext())
             {
-              weighConfigMasters=cntxt.WeighConfigMasters.ToList ();
+                return cntxt.WeighConfigMasters.ToList ();
                
             }
-            return null ;
+          
         }
 
+
+        public List<WeightData> GetWeightData()
+        {
+            using (WeighManContext cntxt = new WeighManContext())
+            {
+                return cntxt.WeightDatas.ToList();
+
+            }
+
+        }
+
+
+        public String GetSavedConfig()
+        {
+            using (WeighManContext cntxt = new WeighManContext())
+            {
+                return cntxt.WeighConfigMasters.Select(u=>u.status ).FirstOrDefault ();
+
+            }
+
+        }
     }
 }

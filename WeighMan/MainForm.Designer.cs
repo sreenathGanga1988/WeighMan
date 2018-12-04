@@ -68,6 +68,7 @@
             this.btnCapture.TabIndex = 4;
             this.btnCapture.Text = "Capture";
             this.btnCapture.UseVisualStyleBackColor = false;
+            this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
             // 
             // btnSettings
             // 
@@ -95,6 +96,7 @@
             this.btn_misreport.TabIndex = 2;
             this.btn_misreport.Text = "MIS Reports";
             this.btn_misreport.UseVisualStyleBackColor = false;
+            this.btn_misreport.Click += new System.EventHandler(this.btn_misreport_Click);
             // 
             // panel1
             // 

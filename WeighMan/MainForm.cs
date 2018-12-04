@@ -23,5 +23,16 @@ namespace WeighMan
             FrmSetting frmset = new FrmSetting();
             frmset.Show();              
         }
+
+        private void btnCapture_Click(object sender, EventArgs e)
+        {
+            FrmConfigure cnfgr = new FrmConfigure();
+            cnfgr.Show();
+        }
+
+        private void btn_misreport_Click(object sender, EventArgs e)
+        {
+            new FrmAuth().ShowDialog();
+        }
     }
 }

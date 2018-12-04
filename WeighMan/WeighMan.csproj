@@ -67,11 +67,11 @@
   <ItemGroup>
     <Compile Include="BL\USBDeviceInfo.cs" />
     <Compile Include="database.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmAuth.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmAuth.Designer.cs">
+      <DependentUpon>FrmAuth.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmConfigure.cs">
       <SubType>Form</SubType>
@@ -95,13 +95,17 @@
     <Compile Include="Migrations\201812031817410_intialconfigadd.Designer.cs">
       <DependentUpon>201812031817410_intialconfigadd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812041856216_ADEDWEIGHT.cs" />
+    <Compile Include="Migrations\201812041856216_ADEDWEIGHT.Designer.cs">
+      <DependentUpon>201812041856216_ADEDWEIGHT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\DbModel.cs" />
     <Compile Include="Model\WeighManContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAuth.resx">
+      <DependentUpon>FrmAuth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConfigure.resx">
       <DependentUpon>FrmConfigure.cs</DependentUpon>
@@ -114,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812031817410_intialconfigadd.resx">
       <DependentUpon>201812031817410_intialconfigadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041856216_ADEDWEIGHT.resx">
+      <DependentUpon>201812041856216_ADEDWEIGHT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -21,4 +21,16 @@ namespace WeighMan.Model
         public String status { get; set; }
       
     }
+
+    public class WeightData
+    {
+
+        [Key]
+        public int WeightDataId { get; set; }
+
+        public String EntryDate { get; set; }
+        public String Picture { get; set; }
+        public String WeightofLoad { get; set; }
+
+    }
 }

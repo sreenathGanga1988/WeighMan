@@ -1,6 +1,6 @@
 ﻿namespace WeighMan
 {
-    partial class Form1
+    partial class FrmAuth
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             // 
             // txt_Entry
             // 
-            this.txt_Entry.Location = new System.Drawing.Point(194, 64);
+            this.txt_Entry.Location = new System.Drawing.Point(15, 42);
             this.txt_Entry.Name = "txt_Entry";
             this.txt_Entry.Size = new System.Drawing.Size(324, 20);
             this.txt_Entry.TabIndex = 0;
@@ -44,7 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(194, 13);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
@@ -52,7 +52,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(244, 149);
+            this.button1.Location = new System.Drawing.Point(114, 77);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -60,15 +60,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // FrmAuth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(354, 115);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Entry);
-            this.Name = "Form1";
+            this.Name = "FrmAuth";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

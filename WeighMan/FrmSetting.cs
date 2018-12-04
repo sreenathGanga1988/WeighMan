@@ -14,7 +14,7 @@ namespace WeighMan
 {
     public partial class FrmSetting : Form
     {
-        private FilterInfoCollection VideoCaptureDevices;
+       
         public FrmSetting()
         {
             InitializeComponent();
